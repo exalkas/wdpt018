@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasa intro</title>
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-size: 2rem;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY')
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                console.log('data', data.photos[501].img_src)
+
+                const img = document.createElement('img')
+                img.src = data.photos[800].img_src
+                document.body.appendChild(img)
+            })
+            .catch(error => console.log('error', error.message))
+    </script>
+</body>
+
+</html>

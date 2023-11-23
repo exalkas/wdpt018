@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Customiser</title>
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-size: 2rem;
+            font-family: sans-serif;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* Light Theme */
+        .light {
+            background-color: #fff;
+            color: #333;
+        }
+
+        /* Dark Theme */
+        .dark {
+            background-color: #333;
+            color: #eee;
+        }
+
+        /* Solarized Theme */
+        .solarized {
+            background-color: #fdf6e3;
+            color: #657b83;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to Theme Customiser!</h1>
+        <p>Select your favorite theme:</p>
+        <select id="themeSelector">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="solarized">Solarized</option>
+        </select>
+        <button>Apply Theme</button>
+    </div>
+    <script>
+
+        const button = document.querySelector('button')
+        const select = document.querySelector('select')
+
+        const selectedTheme = localStorage.getItem('theme')
+        console.log("🚀 ~ selectedTheme on loading:", selectedTheme)
+
+        document.body.className = selectedTheme
+
+        button.addEventListener('click', () => {
+            console.log("🚀 ~ select:", select.value)
+
+            const selectedTheme = select.value
+            document.body.className = selectedTheme
+
+            localStorage.setItem('theme', selectedTheme)
+        })
+
+    </script>
+</body>
+
+</html>

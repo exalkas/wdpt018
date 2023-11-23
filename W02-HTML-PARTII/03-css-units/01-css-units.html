@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 10px;
+        }
+
+        .case {
+            margin: 10px;
+        }
+
+        .Pixels {
+            font-size: 30px;
+        }
+
+        .percentageHeading {
+            background-color: aqua;
+        }
+
+        .percentage {
+            width: 50%;
+            height: 50%;
+            background-color: lightblue;
+            /* font-size: 80%; */
+        }
+
+        .emheading {
+            font-size: 20px;
+        }
+
+        .em {
+            background-color: lightcoral;
+            font-size: 2em;
+        }
+
+        .rem {
+            font-size: 3rem;
+            background-color: lightgreen;
+        }
+
+        .vwhHeading {
+            font-size: 4vw;
+        }
+
+        .vwh {
+            /* font-size: 2vw; */
+            font-size: clamp(20px, 2vw, 40px);
+            background-color: lightpink;
+        }
+
+        .cm {
+            width: 12cm;
+            height: 5cm;
+            background-color: lightsalmon;
+        }
+
+        .pica {
+            font-size: 16pt;
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Units</h1>
+
+    <div class="case">
+        <h2>Pixels</h2>
+        <p class="Pixels">It's fixed size</p>
+    </div>
+    <div class="case percentageHeading">
+        <h2>Percentage %</h2>
+        <p class="percentage">Percentage based on the parent</p>
+    </div>
+    <div class="case emheading">
+        <h2>Em</h2>
+        <p class="em">It's relative to the closest parent with set font-size</p>
+    </div>
+    <div class="case remheading">
+        <h2>Rem</h2>
+        <p class="rem">It's relative to the root element</p>
+    </div>
+    <div class="case vwhHeading ">
+        <h2>Viewport Width and height</h2>
+        <p class="vwh">It's relative to the viewport width and height</p>
+    </div>
+    <div class="case">
+        <h2>Centimeters and inches</h2>
+        <p class="cm">Centimeters and inches</p>
+    </div>
+    <div class="case">
+        <h2>Pt and Pica</h2>
+        <p class="pica">Points and Picas</p>
+    </div>
+</body>
+
+</html>

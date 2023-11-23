@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch intro</title>
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-size: 2rem;
+            font-family: sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            gap: 20px;
+            flex-wrap: wrap;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container"></div>
+
+    <script>
+        const container = document.querySelector('.container');
+
+        fetch('https://api.github.com/users')
+            .then((response) => {
+                console.log('PRomise resolved')
+                console.log('Response', response)
+                return respons.json()
+            }).then((data) => {
+
+                data.forEach(item => {
+                    const div = document.createElement('div')
+
+                    div.textContent = item.login
+                    div.style.border = "1px solid red"
+                    container.appendChild(div)
+                })
+                console.log("🚀 ~ data:", data)
+            })
+            .catch((error) => console.log('Error fetching data', error.message))
+    </script>
+</body>
+
+</html>

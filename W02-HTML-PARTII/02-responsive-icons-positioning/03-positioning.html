@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        div {
+            height: 150px;
+            width: 150px;
+        }
+
+        .static {
+            background-color: aqua;
+            position: static;
+        }
+
+        .relative {
+            background-color: pink;
+            position: relative;
+            left: 100px;
+        }
+
+        /* depending on parent place */
+        .absolute {
+            position: absolute;
+            background-color: lightgreen;
+            top: 50px;
+            left: 50px;
+        }
+
+        .fixed {
+            background-color: lightslategray;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fixed">this is a fixed div</div>
+    <div class="static">this is a static div</div>
+    <div class="relative">this is a relative div
+
+        <div class="absolute">this is an absolute div
+
+
+        </div>
+    </div>
+
+</body>
+
+</html>

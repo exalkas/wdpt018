@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div:nth-child(1) {
+            background-color: lightblue;
+        }
+
+        div:nth-child(2) {
+            background-color: lightcoral;
+        }
+
+        div:nth-child(3) {
+            background-color: lightgreen;
+        }
+
+        div {
+            padding: 10px;
+        }
+
+        main {
+            display: flex;
+
+        }
+
+        /* 
+            @media media-type and condition(breakpoint)
+
+            max-width = until. highest first
+            min-width = from. smallest first
+
+
+        */
+
+        @media (max-width: 1024px) {
+            div:nth-child(2) {
+                background-color: pink;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            main {
+                display: block;
+            }
+
+            div:nth-child(1) {
+                background-color: black;
+                color: white;
+            }
+
+            div:nth-child(2) {
+                background-color: yellow;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                background: red;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div>
+            <h3>Child 1</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium nulla non ut temporibus impedit ab
+                necessitatibus alias fugit ratione consequuntur! Unde hic vero alias repellat soluta dolores magni quo
+                distinctio.</p>
+        </div>
+        <div>
+            <h3>Child 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere harum unde laboriosam assumenda numquam
+                ipsum, earum accusamus blanditiis sunt ea temporibus minima ipsam, excepturi at delectus praesentium.
+                Doloremque, odit? Consequatur.</p>
+        </div>
+        <div>
+            <h3>Child 3</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa eos repellat doloribus placeat quia vero
+                repudiandae perferendis magnam ea temporibus doloremque facere nulla cum odit, excepturi nobis suscipit
+                commodi saepe?</p>
+        </div>
+    </main>
+</body>
+
+</html>

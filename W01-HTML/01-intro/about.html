@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HTML
+    HyperText
+    Markup
+    Language
+ -->
+
+<!-- 
+    CSS
+    Cascading
+    Style
+    Sheets
+  -->
+<style>
+    * {
+        margin: 0;
+    }
+
+    body {
+        background-color: lightblue;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        height: 100px;
+    }
+
+    li {
+        /* display: inline; */
+        /* display: flex; */
+        width: 100px;
+    }
+
+    li:hover {
+        background: white;
+        color: black !important;
+        cursor: pointer;
+    }
+
+    header {
+        /* width: 200px; */
+        /* margin: 40px;
+        padding: 20px; */
+    }
+
+    img {
+        width: 200px;
+        height: 200px;
+    }
+
+    span {
+        width: 200px;
+    }
+
+    #spans {
+        height: 200px;
+        background: pink;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is our first page</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<!-- 
+    Block elements
+
+    they respect width and height
+
+ -->
+
+<body>
+    <header style="background: orange;">
+        <ul>
+            <li style="color: green !important;"><a href="index.html">Home</a></li>
+            <li style="background: red;"><a href="about.html">About</a></li>
+            <li>Contact</li>
+            <li>Blog</li>
+        </ul>
+    </header>
+    <main>
+        this is the about page
+
+    </main>
+
+</body>
+
+</html>

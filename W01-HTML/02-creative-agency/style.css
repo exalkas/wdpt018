@@ -1,0 +1,38 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+
+header {
+    font-family: 'Playfair Display', serif;
+    background-color: red;
+    height: 300px;
+    background-image: url('./assets/bgk-header.png');
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+
+}
+
+li {
+    color: white;
+}
+
+.logo {
+    /* align-self: flex-start; */
+    margin-right: 60px;
+}

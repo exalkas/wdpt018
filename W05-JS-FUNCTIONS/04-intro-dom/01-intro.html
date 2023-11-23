@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to DOM</title>
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-size: 2rem;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            color: black;
+        }
+
+        #firstPara {}
+    </style>
+</head>
+
+<body>
+    <h1>Hello DOM</h1>
+    <p id="firstPara"></p>
+    <p></p>
+    <p></p>
+    <ul class="ulInHtml"></ul>
+    <script>
+        const a = 4
+        const b = 3
+        console.log(a + b)
+        console.log(window)
+
+        const h1 = document.querySelector('h1')
+
+        h1.style.color = "red"
+        h1.style.fontSize = "1rem"
+        // console.log("🚀 ~ :", document.querySelector('h1'))
+        const firstPara = document.querySelector('#firstPara')
+
+        firstPara.textContent = "This is the first paragraph"
+
+        const ul = document.createElement('ul')
+        document.body.appendChild(ul)
+        console.log("🚀 ~ ul:", ul)
+
+        const ulInHtml = document.querySelector('.ulInHtml')
+
+        const li = document.createElement('li')
+
+        ulInHtml.appendChild(li)
+        li.textContent = 'First item here'
+        li.style.color = 'green'
+
+        // ulInHtml.innerText = 'Text using innertext'
+        // 2nd li
+        const li2 = document.createElement('li')
+        ulInHtml.appendChild(li2)
+        li2.textContent = '2nd item'
+
+        const oneListItem = document.querySelector('li')
+        const listItems = document.querySelectorAll('li')
+        console.log("🚀 ~ li:", oneListItem)
+        console.log("🚀 ~ listItems:", listItems)
+        console.log("🚀 ~ listItems:", listItems.length)
+        listItems.forEach(item => console.log(item.textContent))
+
+        // listItems.filter(item => item)
+
+        li2.remove() // removes an element from DOM
+    </script>
+</body>
+
+</html>

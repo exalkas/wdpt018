@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Intro </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* main {
+            display: grid;
+            background: lightblue;
+            width: 100%;
+            min-height: 100vh;
+            grid-template-columns: 100px 200px 50px;
+            grid-template-rows: 200px 200px 100px 200px;
+            gap: 20px;
+        } */
+
+        /* div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+        } */
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 2fr));
+            grid-auto-rows: 100px;
+            gap: 20px
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <img src="https://cdn.pixabay.com/photo/2023/08/21/23/11/woman-8205187_1280.jpg" alt="">
+        <img src="https://picsum.photos/100/100?random=1" alt=""><img src="https://picsum.photos/100/100?random=2"
+            alt=""><img src="https://picsum.photos/100/100?random=3" alt=""><img
+            src="https://picsum.photos/100/100?random=4" alt=""><img src="https://picsum.photos/100/100?random=5"
+            alt=""><img src="https://picsum.photos/100/100?random=6" alt=""><img
+            src="https://picsum.photos/100/100?random=7" alt=""><img src="https://picsum.photos/100/100?random=8"
+            alt=""><img src="https://picsum.photos/100/100?random=9" alt=""><img
+            src="https://picsum.photos/100/100?random=10" alt=""><img src="https://picsum.photos/100/100?random=11"
+            alt=""><img src="https://picsum.photos/100/100?random=12" alt=""><img
+            src="https://picsum.photos/100/100?random=13" alt=""><img src="https://picsum.photos/100/100?random=14"
+            alt=""><img src="https://picsum.photos/100/100?random=15" alt=""><img
+            src="https://picsum.photos/100/100?random=16" alt=""><img src="https://picsum.photos/100/100?random=17"
+            alt=""><img src="https://picsum.photos/100/100?random=18" alt=""><img
+            src="https://picsum.photos/100/100?random=19" alt=""><img src="https://picsum.photos/100/100?random=20"
+            alt="">
+
+    </section>
+    <!-- <main>
+       emmet: div.child*20 
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+    </main> -->
+</body>
+
+</html>

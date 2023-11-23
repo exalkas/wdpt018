@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event delegation demo</title>
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-size: 2rem;
+            font-family: sans-serif;
+        }
+
+        li {
+            padding: 10px;
+            border: 1px solid black;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        button {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+    </ul>
+
+    <script>
+        const ul = document.querySelector('ul');
+
+        document.body.addEventListener('click', (e) => {
+            console.log('ul or li clicked', e.target.textContent)
+            // e.currentTarget is the element that has the event listener
+            console.log('ul or li clicked', e.currentTarget)
+        })
+    </script>
+</body>
+
+</html>

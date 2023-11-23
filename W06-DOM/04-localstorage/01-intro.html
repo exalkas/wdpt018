@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to localstorage</title>
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-size: 2rem;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        const student = {
+            name: "a",
+            age: 33
+        }
+
+        const studentString = JSON.stringify(student)
+        console.log("🚀 ~ studentString:", studentString)
+
+        // localStorage.setItem("demo", studentString)
+        const key = localStorage.getItem('demo')
+        console.log("🚀 ~ key:", key.name)
+        const keyObject = JSON.parse(key)
+        console.log("🚀 ~ keyObject:", keyObject.name)
+        console.log("🚀 ~ key:", key, typeof key)
+
+        // sessionStorage.setItem('demo2', 123)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinators intro </title>
+
+
+    <style>
+        /* the space combinator */
+        .descendant p {
+            color: red;
+        }
+
+        /* direct child with ">" */
+        .child>p {
+            color: blue;
+        }
+
+        /* adjacent sibling  with "+" */
+        h2+p {
+            font-weight: bold;
+        }
+
+        /* all  siblings with "~"*/
+        h3~p {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="descendant">
+            <p>Level 1</p>
+            <div>
+                <p>Level 2</p>
+            </div>
+        </div>
+
+    </section>
+    <section>
+        <div class="child">
+            <p>Direct Child</p>
+            <p>Direct Child2</p>
+            <p>Direct Child3 </p>
+            <div>
+                <p>Not Direct Child</p>
+            </div>
+        </div>
+
+    </section>
+    <section>
+        <h2>Title</h2>
+        <p>Adjacent Sibling</p>
+        <p>Not Adjacent Sibling</p>
+
+    </section>
+
+    <section>
+        <h3>Title</h3>
+        <p>Sibling 1</p>
+        <p>Sibling 2</p>
+
+    </section>
+</body>
+
+</html>

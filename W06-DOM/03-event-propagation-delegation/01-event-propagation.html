@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation demo</title>
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            font-size: 2rem;
+            font-family: sans-serif;
+        }
+
+        div {
+            padding: 20px;
+            border: 2px solid black;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        Outer Div
+        <div id="middle">
+            Middle Div
+            <div id="inner">Inner div</div>
+        </div>
+    </div>
+    <script>
+        const outer = document.getElementById('outer');
+        const middle = document.getElementById('middle');
+        const inner = document.getElementById('inner');
+
+        outer.addEventListener('click', () => console.log('Outer clicked Bubbling phase'))
+        middle.addEventListener('click', () => console.log('middle clicked Bubbling phase'))
+        inner.addEventListener('click', () => console.log('inner clicked Bubbling phase'))
+        // outer.addEventListener('click', () => console.log('Outer clicked Bubbling phase'), false)
+        // middle.addEventListener('click', () => console.log('middle clicked Bubbling phase'), false)
+        // inner.addEventListener('click', () => console.log('inner clicked Bubbling phase'), false)
+        // outer.addEventListener('click', () => console.log('Outer clicked Capturing phase'), true)
+        // middle.addEventListener('click', () => console.log('middle clicked Capturing phase'), true)
+        // inner.addEventListener('click', () => console.log('inner clicked Capturing phase'), true)
+
+    </script>
+</body>
+
+</html>

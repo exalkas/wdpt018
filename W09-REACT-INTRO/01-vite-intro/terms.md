@@ -1,0 +1,2 @@
+- SPA = Single Page Application
+- npm = node package manager
