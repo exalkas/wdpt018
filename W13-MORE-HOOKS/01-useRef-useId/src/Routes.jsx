@@ -7,6 +7,8 @@ import Posts from "./pages/Posts";
 import Weather from "./pages/Weather";
 import HomeLayout from "./layouts/HomeLayout";
 import Todos from "./pages/Todos";
+import Cart from "./pages/Cart";
+import Editor from "./pages/Editor";
 import Profile from "./pages/Profile";
 // import TitleLayout from "./layouts/TitleLayout";
 
@@ -22,6 +24,8 @@ export default function RoutesComp() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/title" element={<Title />} />
           <Route path="/posts" element={<Posts />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/editor" element={<Editor />} />
         </Route>
       </Routes>
     </BrowserRouter>
