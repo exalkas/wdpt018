@@ -11,6 +11,7 @@ import Cart from "./pages/Cart";
 import Editor from "./pages/Editor";
 import Profile from "./pages/Profile";
 import Twitter from "./pages/Twitter";
+import Contact from "./pages/Contact";
 // import TitleLayout from "./layouts/TitleLayout";
 
 export default function RoutesComp() {
@@ -28,6 +29,7 @@ export default function RoutesComp() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/twitter" element={<Twitter />} />
           <Route path="/editor" element={<Editor />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -12,7 +12,8 @@ export default function Navbar() {
       <NavLink to="/twitter">Twitter</NavLink>
       <NavLink to="/profile">Profile</NavLink>
       <NavLink to="/cart">Cart</NavLink>
-      <Toggle />
+      <NavLink to="/contact">Contact us</NavLink>
+      {/* <Toggle /> */}
     </div>
   );
 }
