@@ -2,9 +2,7 @@ import mongoose from "mongoose";
 
 export default async function connect() {
   try {
-    await mongoose.connect(
-      "mongodb+srv://admin29290:UwhG2rRi1Cv7NOxP@cluster0.y4fbcsh.mongodb.net/social?retryWrites=true&w=majority"
-    );
+    await mongoose.connect(process.env.DB_URI);
 
     console.log("Connected to db");
   } catch (error) {
