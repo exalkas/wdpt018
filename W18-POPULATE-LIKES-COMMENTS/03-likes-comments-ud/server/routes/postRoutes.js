@@ -1,0 +1,22 @@
+import express from "express";
+import {
+  handleAddPost,
+  handleGetAllPosts,
+  handleGetOnePost,
+  handleDeletePost,
+  handleEditPost,
+  handleLikes,
+} from "../controllers/postController.js";
+import upload from "../middlewares/multer-local.js";
+import uploadCloudinary from "../middlewares/multer-cloudinary.js";
+
+const router = express.Router();
+
+router.post("/add", uploadCloudinary.single("postImage"), handleAddPost);
+router.get("/get/all", handleGetAllPosts);
+router.get("/get/one", handleGetOnePost);
+router.delete("/delete/:id", handleDeletePost);
+router.put("/edit", handleEditPost);
+router.post("/handleLike", handleLikes);
+
+export default router;
