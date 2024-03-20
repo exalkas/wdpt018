@@ -1,0 +1,36 @@
+import express from "express";
+import connectDB from "./utils/dbConnect.js";
+import connectDBPG from "./utils/dbPGConnect.js";
+import userRoutes from "./routes/userRoutes.js";
+import postRoutes from "./routes/postRoutes.js";
+import commentRoutes from "./routes/commentRoutes.js";
+import dotenv from "dotenv/config";
+import cors from "cors";
+import morgan from "morgan";
+import cookieParser from "cookie-parser";
+
+import errorHandler from "./middlewares/errorMiddleware.js";
+
+const app = express();
+
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    credentials: true, // Allow cookies to be sent/accepted
+  })
+);
+
+app.use(morgan("dev"));
+app.use(cookieParser());
+app.use(express.json()); // to parse body from requests
+app.use("/uploads", express.static("uploads"));
+
+app.use("/users", userRoutes);
+app.use("/posts", postRoutes);
+app.use("/posts/comments", commentRoutes);
+
+connectDB();
+connectDBPG();
+
+app.use(errorHandler);
+app.listen(5000, () => console.log("Server is up and running!"));
